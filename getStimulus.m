@@ -1,8 +1,8 @@
-% get stimulus
-
 function stimulus = getStimulus(stimulusDuration, stimulusType, numberInput)
 
 %%
+
+% DESCRIPTION ---------------------------------------------------
 
 % In this file, I included some most commonly used stimulus types, stimulus
 % types include :
@@ -14,32 +14,30 @@ function stimulus = getStimulus(stimulusDuration, stimulusType, numberInput)
 
 
 
-% INPUT:
+% INPUT(s) ---------------------------------------------------------
 
 % stimulusDuration  : length of the stimulus in the unit of millisecond.
-                    % stimulus timing ranges from 1 : stimulusDuration.
+                      % stimulus timing ranges from 1 : stimulusDuration.
 
 % stimulusType      : one of the following text strings : 'onepulse',
-                    % 'twopulses', 'square' and 'sin'.
-
+                      % 'twopulses', 'square' and 'sin'.
+                    
 % numberInput       : if stimulusType is 'onepulse," numberInput = pulse
-                    % length in unit of millisecond; if stimulusType is
-                    % 'twopulses', numberInput is a vector of 3 entries:
-                    % [length of first pulse, length of isi, length of
-                    % second pulse]; if stimulusType is "square",
-                    % numberInput is cycle duty; if stimulusType is "sin",
-                    % numberInput is the number of cycles. 
+                      % length in unit of millisecond; if stimulusType is
+                      % 'twopulses', numberInput is a vector of 3 entries: 
+                      % [length of first pulse, length of isi, length of
+                      % second pulse]; if stimulusType is "square"
 
-                    
-                    
-% OUTPUT
+% OUTPUT(s) -------------------------------------------------------
 
-% stimulus          : outputting stimulus;
+% stimulus          : stimulus output of size([1, stimulusDuration]). 
 
-% EXAMPLES : 
 
-showExampleOn = 0;  % For example chance this to 1. 
+% EXAMPLE ------------------------------------------------------
+
+showExampleOn = 0;
 showExample = 'twopulses';
+
 
 %% show example
 
@@ -69,6 +67,8 @@ if stimulusDuration < 100 | numberInput < 1
 end
 
 stimulus = zeros(1, stimulusDuration);
+
+
 
 
 %% generate stimulus
@@ -106,7 +106,7 @@ if showExampleOn == 1
     plot(stimulus, 'lineWidth', 3)
     title('Example Stimulus')
     xlabel('time (ms)')
-    ylabel('contrast amplitude'),
+    ylabel('contrast amplitude'), 
     grid on
     ylim([-0.5, 1.5])
 end
