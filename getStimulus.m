@@ -13,7 +13,6 @@ function stimulus = getStimulus(stimulusDuration, stimulusType, numberInput)
 % (4) sinusoid of prespecified cycle length
 
 
-
 % INPUT(s) ---------------------------------------------------------
 
 % stimulusDuration  : length of the stimulus in the unit of millisecond.
@@ -67,8 +66,6 @@ if stimulusDuration < 100 | numberInput < 1
 end
 
 stimulus = zeros(1, stimulusDuration);
-
-
 
 
 %% generate stimulus

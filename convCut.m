@@ -25,7 +25,7 @@ function output = convCut (stimulus, impulse, nTerms)
 % conv_output : full length output cut between 1 and num_term
 
 
-%%
+%% compute convolution:        
 
 output = conv(stimulus, impulse, 'full');
 

@@ -67,11 +67,12 @@ end
 linearRsp = zeros(nNeurons, length(stimulus));
 impulse   = zeros(size(linearRsp));
 
-
 % generate noise :
 
-noise = randn(1, nNeurons).* noiseStd;
-peak  = max(0.0008, impulseParam(1) + noise);
+noise     = randn(1, nNeurons).* noiseStd;
+peak      = max(0.0008, impulseParam(1) + noise);
+
+% compute impulse repsonse function:
 
 switch impulseType
     case 'onegamma'
