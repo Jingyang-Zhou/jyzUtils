@@ -35,7 +35,7 @@ function linearRsp = getPatchLinearResponse(stimulus, impulseType, impulseParam,
 
 % EXAMPLE ----------------------------------------------
 
-exampleOn = 1;
+exampleOn = 0;
 
 if exampleOn
     stimulus     = getStimulus(1000, 'onepulse', 300);
