@@ -99,6 +99,7 @@ s = sum((data - target).^2);
         normalizedOutput = fMRIsimulator(neuralRsp, numRepeat, 0, trialOrder, 0);
     end
 
+
 %% plotting the example
 
 if exampleOn | figureOn
